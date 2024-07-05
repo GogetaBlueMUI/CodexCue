@@ -44,14 +44,14 @@ def cal():
             print(f"{num1} * {num2} = {mul(num1,num2)}")
         elif choice == 4:
             result= div(num1,num2)
-            if result == int or result == float:
+            if isinstance(result,(float,int)):
                 print(f"{num1} / {num2} = {result}")
             else:
                 print(result)
         elif choice == 5:
             result= mod(num1,num2)
-            if result == int or result == float:
-                print(f"{num1} / {num2} = {result}")
+            if isinstance(result,(float,int)):
+                print(f"{num1} % {num2} = {result}")
             else:
                 print(result)
         elif choice == 6:
@@ -61,7 +61,7 @@ def cal():
             print(f"√{num} = {square_root(num)}")
         else:
             print("Enter a Valid Input")
-        next_cal=input("Do you wnat to continue (yes/no): ")
+        next_cal=input("Do you want to continue (yes/no): ")
         if next_cal.lower() !="yes":
             break
 
